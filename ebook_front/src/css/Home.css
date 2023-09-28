@@ -1,0 +1,43 @@
+
+.ant-layout{
+    background-color: white;
+
+}
+
+
+.ant-carousel{
+
+    width: 530px;
+    height: 200px;
+
+}
+
+.bookList{
+
+}
+
+.bookCard{
+
+}
+
+.ant-layout-has-side {
+    width: 830px;
+    margin: 0 auto;
+
+}
+
+.search-icon{
+    background-color: black;
+
+}
+
+.ant-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+}
+
+.ant-card-body {
+    padding: 16px;
+
+}

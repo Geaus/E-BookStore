@@ -1,0 +1,32 @@
+
+.logo{
+    float: left;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+    background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    font-weight: bolder;
+}
+
+.login{
+    float: right;
+}
+
+.ant-header{
+    background: #fff;
+    -webkit-box-shadow: 0 2px 8px #f0f1f2;
+    box-shadow: 0 2px 8px #f0f1f2;
+
+}
+
+.header{
+    position: fixed;
+    z-index: 10;
+    max-width: 100%;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 8px #f0f1f2;
+    box-shadow: 0 2px 8px #f0f1f2;
+    width:100%;
+}

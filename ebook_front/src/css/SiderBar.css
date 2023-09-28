@@ -1,0 +1,23 @@
+/*.mySide{*/
+/*    border-left: 1px solid #e8e8e8 !important;*/
+/*    border-right: 1px solid #e8e8e8 !important;*/
+/*    position:fixed;*/
+/*    height:100vh;*/
+/*}*/
+
+/*.side {*/
+/*    background: #ffffff;*/
+/*    overflow: hidden !important;*/
+/*    padding-left: 0 !important;*/
+/*    padding-right:0 !important;*/
+/*    */
+/*}*/
+
+.ant-layout-sider-trigger{
+    position:relative;
+    background: #ffffff !important;
+}
+
+.ant-layout-sider-trigger .anticon {
+    color:#000000 !important;
+}
