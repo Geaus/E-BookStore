@@ -40,19 +40,7 @@ export const clearCart = (callback) => {
     const params = new URLSearchParams();
     params.append('uid', uid);
 
-    fetch('http://localhost:8080/makeOrder?'+params.toString()).then(response => response.json())
-
-        .then((data) => {
-
-               if(data.toString()==='1'){
-                   message.success('订单确认成功');
-               }
-               else if(data.toString()==='0'){
-                   message.error('购物车为空或购物车中书籍全部下架')
-               }
-
-
-        });
+    fetch('http://localhost:8080/makeOrder?'+params.toString()).then()
 
 };
 

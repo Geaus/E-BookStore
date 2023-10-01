@@ -71,7 +71,10 @@ class Cart extends React.Component{
                 <content>
                     <Table style={{paddingTop:'50px'}} columns={columns} dataSource={this.state.cart}/>
 
+                    <Link to="/makeOrder">
                         <Button type="primary"  size={"large"}  ghost onClick={this.handleClear} >清空购物车</Button>
+                    </Link>
+
 
                 </content>
             </Layout>

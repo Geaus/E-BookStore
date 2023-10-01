@@ -15,6 +15,8 @@ import AdminBookView from "./view/AdminView/AdminBookView";
 import AdminOrderView from "./view/AdminView/AdminOrderView";
 import AdminSaleView from "./view/AdminView/AdminSaleView";
 import AdminConsumeView from "./view/AdminView/AdminConsumeView";
+import MakeOrder from "./components/MakeOrder";
+import MakeOrderView from "./view/MakeOrderView";
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
               <Route path="/orders" element={<OrdersView />} />
               <Route path="/profile" element={<ProfileView />} />
               <Route path="/statistic" element={<StatisticView />} />
+              <Route path="/makeOrder" element={<MakeOrderView/>} />
 
               <Route path="adminUser" element={<AdminUserView/>}/>
               <Route path="adminBook" element={<AdminBookView/>}/>

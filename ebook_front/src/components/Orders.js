@@ -6,7 +6,7 @@ import {getOrders, UserFilterOrderBook, UserFilterOrderDate} from "../services/B
 import {SearchOutlined} from "@ant-design/icons";
 const { RangePicker } = DatePicker;
 
-const columns = [
+export const columns = [
     {
         title: '订单ID',
         dataIndex: 'id',
