@@ -1,6 +1,7 @@
 package com.example.ebook.kafka;
 
 import com.example.ebook.Service.CartService;
+import com.example.ebook.WebSocket.WebSocketServer;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -16,6 +17,8 @@ public class Listener {
     CartService cartService;
     @Autowired
     KafkaTemplate kafkaTemplate;
+    @Autowired
+    WebSocketServer webSocketServer;
 
     @KafkaListener(topics = "Order",groupId = "group_topic_order")
     public void makeOrderListener(ConsumerRecord<String, String> record) throws JsonProcessingException {
@@ -30,9 +33,7 @@ public class Listener {
 
     @KafkaListener(topics = "OrderFinished",groupId = "group_topic_order")
     public void finishOrderListener(ConsumerRecord<String, String> record){
-
-        System.out.println("uid="+record.key()+"  "+record.value());
-
+        webSocketServer.sendMessage(record.key(), record.value());
     }
 
 }

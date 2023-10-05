@@ -7,8 +7,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -54,7 +57,7 @@ public class CartServiceImpl implements CartService {
         return  "购物车添加成功";
     }
 
-    @Transactional
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public String makeOrder(int uid) throws JsonProcessingException {
 
@@ -73,7 +76,6 @@ public class CartServiceImpl implements CartService {
             cartDao.deleteCartsByUser(u);
             return "";
         }
-
 
         Orders newOrder=new Orders();
         newOrder.setUser(u);
@@ -99,7 +101,6 @@ public class CartServiceImpl implements CartService {
         }
 
         newOrder.setOrderItems(items);
-        orderDao.save(newOrder);
         cartDao.deleteCartsByUser(u);
 
 

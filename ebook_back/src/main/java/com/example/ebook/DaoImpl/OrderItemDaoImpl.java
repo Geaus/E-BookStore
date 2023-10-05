@@ -6,6 +6,8 @@ import com.example.ebook.Entity.OrderItem;
 import com.example.ebook.Repository.OrderItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public class OrderItemDaoImpl implements OrderItemDao {
@@ -17,8 +19,10 @@ public class OrderItemDaoImpl implements OrderItemDao {
         orderItemRepository.deleteOrderItemsByBook(b);
     }
 
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public void save(OrderItem item){
         orderItemRepository.save(item);
+        //        int a=10/0;
     }
 }
