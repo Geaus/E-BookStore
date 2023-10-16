@@ -11,8 +11,12 @@ class MakeOrder extends React.Component{
         this.state = {
            showOrder:false,
             orders: "",
+            websocket:null
         };
+
+
     }
+
     componentDidMount() {
 
         let uid = sessionStorage.getItem('uid');
@@ -23,6 +27,7 @@ class MakeOrder extends React.Component{
         };
         websocket.onerror = (event) => {
             console.log("websocket发生错误..." + event + '\n');
+            websocket.close();
         }
         websocket.onclose = ()=> {
             console.log("关闭 websocket 连接...");
@@ -37,8 +42,15 @@ class MakeOrder extends React.Component{
             tmpArr.push(tmp);
             this.setState({orders:tmpArr});
             this.setState({showOrder:true});
-        };
 
+
+        };
+    }
+
+    componentWillUnmount() {
+        if (this.websocket) {
+            this.websocket.close();
+        }
     }
 
     handleChange=(event)=>{
