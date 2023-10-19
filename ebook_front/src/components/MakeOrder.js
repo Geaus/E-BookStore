@@ -19,39 +19,39 @@ class MakeOrder extends React.Component{
 
     componentDidMount() {
 
-        let uid = sessionStorage.getItem('uid');
-        let url = "ws://localhost:8080/websocket/"+uid;
-        websocket = new WebSocket(url);
-        websocket.onopen = ()=> {
-            console.log("建立 websocket 连接...");
-        };
-        websocket.onerror = (event) => {
-            console.log("websocket发生错误..." + event + '\n');
-            websocket.close();
-        }
-        websocket.onclose = ()=> {
-            console.log("关闭 websocket 连接...");
-            this.setState({showOrder:false});
-
-        };
-        websocket.onmessage = (event) => {
-            console.log(event.data);
-            let tmp =JSON.parse(event.data.toString());
-            console.log(tmp);
-            let tmpArr =[];
-            tmpArr.push(tmp);
-            this.setState({orders:tmpArr});
-            this.setState({showOrder:true});
-
-
-        };
+        // let uid = sessionStorage.getItem('uid');
+        // let url = "ws://localhost:8080/websocket/"+uid;
+        // websocket = new WebSocket(url);
+        // websocket.onopen = ()=> {
+        //     console.log("建立 websocket 连接...");
+        // };
+        // websocket.onerror = (event) => {
+        //     console.log("websocket发生错误..." + event + '\n');
+        //     websocket.close();
+        // }
+        // websocket.onclose = ()=> {
+        //     console.log("关闭 websocket 连接...");
+        //     this.setState({showOrder:false});
+        //
+        // };
+        // websocket.onmessage = (event) => {
+        //     console.log(event.data);
+        //     let tmp =JSON.parse(event.data.toString());
+        //     console.log(tmp);
+        //     let tmpArr =[];
+        //     tmpArr.push(tmp);
+        //     this.setState({orders:tmpArr});
+        //     this.setState({showOrder:true});
+        //
+        //
+        // };
     }
 
-    componentWillUnmount() {
-        if (this.websocket) {
-            this.websocket.close();
-        }
-    }
+    // componentWillUnmount() {
+    //     if (websocket) {
+    //         websocket.close();
+    //     }
+    // }
 
     handleChange=(event)=>{
 

@@ -34,7 +34,7 @@ export const addCart = (uid,bookid) => {
 };
 
 
-export const clearCart = (callback) => {
+export const makeOrder = (callback) => {
 
     const uid = sessionStorage.getItem('uid');
     const params = new URLSearchParams();
