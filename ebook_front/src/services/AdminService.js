@@ -2,7 +2,7 @@
 
 export const getUsers=(callback)=>{
 
-    fetch('http://localhost:8080/getUsers') // 发送fetch请求获取联系人信息的接口地址
+    fetch('http://localhost:8080/main/getUsers') // 发送fetch请求获取联系人信息的接口地址
         .then(response => response.json())
         .then(data => {
            callback(data);
@@ -15,7 +15,7 @@ export const getUsers=(callback)=>{
 
 export const banUser=(params,callback)=>{
 
-    fetch('http://localhost:8080/banUser?'+params.toString()) // 发送fetch请求获取联系人信息的接口地址
+    fetch('http://localhost:8080/main/banUser?'+params.toString()) // 发送fetch请求获取联系人信息的接口地址
         .then(response => response.json())
         .then(data => {
            callback(data);
@@ -28,7 +28,7 @@ export const banUser=(params,callback)=>{
 
 export const unbanUser=(params,callback)=>{
 
-    fetch('http://localhost:8080/unbanUser?'+params.toString()) // 发送fetch请求获取联系人信息的接口地址
+    fetch('http://localhost:8080/main/unbanUser?'+params.toString()) // 发送fetch请求获取联系人信息的接口地址
         .then(response => response.json())
         .then(data => {
             callback(data);
@@ -41,7 +41,7 @@ export const unbanUser=(params,callback)=>{
 
 export const AdminFilterOrderBook=(params,callback)=>{
 
-    fetch('http://localhost:8080/AdminFilterOrderBook?'+params.toString())
+    fetch('http://localhost:8080/main/AdminFilterOrderBook?'+params.toString())
         .then(response => response.json())
         .then((data) => {
            callback(data);
@@ -50,7 +50,7 @@ export const AdminFilterOrderBook=(params,callback)=>{
 
 export const AdminFilterOrderDate=(params,callback)=>{
 
-    fetch('http://localhost:8080/AdminFilterOrderDate?'+params.toString())
+    fetch('http://localhost:8080/main/AdminFilterOrderDate?'+params.toString())
         .then(response => response.json())
         .then((data) => {
            callback(data);
@@ -59,7 +59,7 @@ export const AdminFilterOrderDate=(params,callback)=>{
 
 export const getSale=(params,callback)=>{
 
-    fetch('http://localhost:8080/getSale?'+params.toString())
+    fetch('http://localhost:8080/main/getSale?'+params.toString())
         .then(response => response.json())
         .then((data) => {
            callback(data);
@@ -68,7 +68,7 @@ export const getSale=(params,callback)=>{
 
 export const getConsumption=(params,callback)=>{
 
-    fetch('http://localhost:8080/getConsumption?'+params.toString())
+    fetch('http://localhost:8080/main/getConsumption?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);
@@ -78,7 +78,7 @@ export const getConsumption=(params,callback)=>{
 
 export const getBook=(params,callback)=>{
 
-    fetch('http://localhost:8080/getBook?'+params.toString())
+    fetch('http://localhost:8080/main/getBook?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);
@@ -88,7 +88,7 @@ export const getBook=(params,callback)=>{
 
 export const deleteBook=(params,callback)=>{
 
-    fetch('http://localhost:8080/deleteBook?'+params.toString())
+    fetch('http://localhost:8080/main/deleteBook?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);
@@ -96,7 +96,7 @@ export const deleteBook=(params,callback)=>{
 }
 export const editBook=(params,callback)=>{
 
-    fetch('http://localhost:8080/editBook?'+params.toString())
+    fetch('http://localhost:8080/main/editBook?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);
@@ -106,7 +106,7 @@ export const editBook=(params,callback)=>{
 
 export const addBook=(params,callback)=>{
 
-    fetch('http://localhost:8080/addBook?'+params.toString())
+    fetch('http://localhost:8080/main/addBook?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);

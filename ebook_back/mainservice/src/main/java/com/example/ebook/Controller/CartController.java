@@ -9,8 +9,6 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin
-
 public class CartController {
     @Autowired
     BookRepository bookRepository;

@@ -1,13 +1,22 @@
 import {message} from "antd";
 export function getBook(bookId) {
-    return fetch(`http://localhost:8080/getBook/${bookId}`).then((response) =>
+    return fetch(`http://localhost:8080/main/getBook/${bookId}`).then((response) =>
         response.json()
     );
 }
 
 export const getBooks = (callback) => {
 
-    fetch('http://localhost:8080/getBooks')
+    fetch('http://localhost:8080/main/getBooks')
+        .then(response => response.json())
+        .then((data) => {
+            callback(data);
+        })
+};
+
+export const getAuthor = (params,callback) => {
+
+    fetch('http://localhost:8080/micro/searchAuthor?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);
@@ -21,7 +30,7 @@ export const addCart = (uid,bookid) => {
     params.append('uid', uid);
     params.append('bookid', bookid);
 
-      fetch(`http://localhost:8080/addCart?`+params.toString())
+      fetch(`http://localhost:8080/main/addCart?`+params.toString())
 
          .then(response=>{
             if(response.ok){
@@ -40,7 +49,7 @@ export const makeOrder = (callback) => {
     const params = new URLSearchParams();
     params.append('uid', uid);
 
-    fetch('http://localhost:8080/makeOrder?'+params.toString()).then()
+    fetch('http://localhost:8080/main/makeOrder?'+params.toString()).then()
 
 };
 
@@ -51,7 +60,7 @@ export const getCart = (callback) => {
     const params = new URLSearchParams();
     params.append('uid', uid);
 
-    fetch('http://localhost:8080/getCarts?'+params.toString())
+    fetch('http://localhost:8080/main/getCarts?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);
@@ -64,7 +73,7 @@ export const getOrders = (callback) => {
     const params = new URLSearchParams();
     params.append('uid', uid);
 
-    fetch('http://localhost:8080/getOrders?'+params.toString())
+    fetch('http://localhost:8080/main/getOrders?'+params.toString())
         .then((response) => response.json())
         .then((data) => {
             callback(data);
@@ -73,7 +82,7 @@ export const getOrders = (callback) => {
 
 export const statistic=(params,callback)=>{
 
-    fetch('http://localhost:8080/statistic?'+params.toString())
+    fetch('http://localhost:8080/main/statistic?'+params.toString())
         .then(response => response.json())
         .then((data) => {
           callback(data);
@@ -82,7 +91,7 @@ export const statistic=(params,callback)=>{
 
 export const UserFilterOrderDate=(params,callback)=>{
 
-    fetch('http://localhost:8080/UserFilterOrderDate?'+params.toString())
+    fetch('http://localhost:8080/main/UserFilterOrderDate?'+params.toString())
         .then(response => response.json())
         .then((data) => {
            callback(data);
@@ -92,7 +101,7 @@ export const UserFilterOrderDate=(params,callback)=>{
 
 export const UserFilterOrderBook=(params,callback)=>{
 
-    fetch('http://localhost:8080/UserFilterOrderBook?'+params.toString())
+    fetch('http://localhost:8080/main/UserFilterOrderBook?'+params.toString())
         .then(response => response.json())
         .then((data) => {
            callback(data);
@@ -102,7 +111,7 @@ export const UserFilterOrderBook=(params,callback)=>{
 
 export const filterBook=(params,callback)=>{
 
-    fetch('http://localhost:8080/filterBook?'+params.toString())
+    fetch('http://localhost:8080/main/filterBook?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);

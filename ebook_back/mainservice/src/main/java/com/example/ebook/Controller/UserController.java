@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.text.ParseException;
 
 @RestController
-@CrossOrigin
-
 public class UserController {
     @Autowired
     UserRepository userRepository;

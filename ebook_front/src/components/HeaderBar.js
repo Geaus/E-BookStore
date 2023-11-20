@@ -5,6 +5,7 @@ import "../css/Home.css"
 import"../css/Header.css"
 import {Button, message} from "antd";
 import {logout} from "../services/UserService";
+import {LogoutOutlined} from "@ant-design/icons";
 
 
 class HeaderBar extends React.Component{
@@ -27,7 +28,10 @@ class HeaderBar extends React.Component{
 
                   <div className="login">
                       <Link to={"/"}>
-                          <Button style={{paddingRight:'10px', fontSize:'20px'}} onClick={this.handleLogout}> Log out</Button>
+                          <Button
+                                  onClick={this.handleLogout}
+                                  icon={<LogoutOutlined/>}>
+                          </Button>
                       </Link>
 
                   </div>

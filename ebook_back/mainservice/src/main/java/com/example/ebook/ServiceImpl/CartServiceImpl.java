@@ -57,7 +57,7 @@ public class CartServiceImpl implements CartService {
         return  "购物车添加成功";
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional(propagation = Propagation.REQUIRED,rollbackFor=Exception.class)
     @Override
     public String makeOrder(int uid) throws JsonProcessingException {
 
@@ -72,10 +72,10 @@ public class CartServiceImpl implements CartService {
                 carts.add(c);
             }
         }
-        if(carts.size()==0){
-            cartDao.deleteCartsByUser(u);
-            return "";
-        }
+//        if(carts.size()==0){
+//            cartDao.deleteCartsByUser(u);
+//            return "";
+//        }
 
         Orders newOrder=new Orders();
         newOrder.setUser(u);

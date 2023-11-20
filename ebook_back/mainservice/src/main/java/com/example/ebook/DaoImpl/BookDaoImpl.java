@@ -10,7 +10,10 @@ import com.example.ebook.Repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -49,6 +52,7 @@ public class BookDaoImpl implements BookDao {
         return bookRepository.findBooksByNameContaining(name);
     }
 
+    @Transactional(propagation = Propagation.REQUIRED,rollbackFor=Exception.class)
     @Override
     public void save(Book b){
         Object p =redisOps.get("book:"+b.getId());
@@ -77,7 +81,15 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public List<Book> findAll(){
-        return bookRepository.findAll();
+        List<Book> result = new ArrayList<>();
+        long num = bookRepository.count();
+
+        for(long i = 1;i < num;i++){
+            Book b =new Book();
+            b = findBookByIdIs((int) i);
+            result.add(b);
+        }
+        return result;
     }
 
     @Override

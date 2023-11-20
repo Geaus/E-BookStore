@@ -6,7 +6,7 @@ export const getUser = (callback) => {
     const params = new URLSearchParams();
     params.append('uid', uid);
 
-    fetch('http://localhost:8080/getUser?'+params.toString())
+    fetch('http://localhost:8080/main/getUser?'+params.toString())
 
         .then(response => response.json())
         .then((data) => {
@@ -17,7 +17,7 @@ export const getUser = (callback) => {
 
 export const login = (username, password) => {
 
-    return fetch('http://localhost:8080/login', {
+    return fetch('http://localhost:8080/main/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -47,7 +47,7 @@ export const login = (username, password) => {
 
 export const logout = (callback) => {
 
-   fetch('http://localhost:8080/logout',{
+   fetch('http://localhost:8080/main/logout',{
        credentials:'include'
    })
        .then(response => response.json())
@@ -60,7 +60,7 @@ export const logout = (callback) => {
 
 export const newUser = (params,callback) => {
 
-    fetch('http://localhost:8080/newUser?'+params.toString())
+    fetch('http://localhost:8080/main/newUser?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);

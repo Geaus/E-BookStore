@@ -6,6 +6,8 @@ import com.example.ebook.Repository.*;
 import com.example.ebook.Service.CartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -32,6 +34,7 @@ public class CartDaoImpl implements CartDao {
         return cartRepository.findCartsByUser_Id(index);
     }
 
+    @Transactional(propagation = Propagation.REQUIRED,rollbackFor=Exception.class)
     @Override
     public  void save(Cart c){
         cartRepository.save(c);

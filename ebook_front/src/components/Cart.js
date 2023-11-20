@@ -65,7 +65,7 @@ class Cart extends React.Component{
         this.setState({modalIsOpen:true});
 
         let uid = sessionStorage.getItem('uid');
-        let url = "ws://localhost:8080/websocket/"+uid;
+        let url = "ws://localhost:8081/websocket/"+uid;
         websocket = new WebSocket(url);
         websocket.onopen = ()=> {
             console.log("建立 websocket 连接...");

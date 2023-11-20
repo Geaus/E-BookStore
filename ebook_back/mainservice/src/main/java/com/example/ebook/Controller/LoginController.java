@@ -15,7 +15,6 @@ import org.springframework.web.context.WebApplicationContext;
 import javax.servlet.http.HttpSession;
 
 @RestController
-@CrossOrigin
 @Scope("session")
 public class LoginController {
 
@@ -45,7 +44,7 @@ public class LoginController {
     public TimerResult logout(HttpSession session){
 
         TimerResult result =clockService.endClock();
-//        System.out.println(result);
+        System.out.println(result);
         return result;
     }
 }

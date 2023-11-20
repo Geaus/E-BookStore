@@ -2,14 +2,13 @@ import React from 'react';
 import {Layout} from 'antd';
 import HeaderBar from "../components/HeaderBar";
 import SideBar from "../components/SideBar";
-import BookList from "../components/BookList";
 import "../css/Home.css"
 import "../css/Header.css"
-import MakeOrder from "../components/MakeOrder";
+import Microservice from "../components/Microservice";
 
 const { Header, Content } = Layout;
 
-class MakeOrderView extends React.Component{
+class MicroView extends React.Component{
     render() {
 
         return(
@@ -20,9 +19,9 @@ class MakeOrderView extends React.Component{
                 <Layout className="ant-layout-has-side" >
                     <SideBar/>
                     <Content className="ant-layout" style={{ padding: '0 50px' }}>
-
-                              <MakeOrder/>
-
+                        <div className="home-content">
+                            <Microservice/>
+                        </div>
                     </Content>
                 </Layout>
             </Layout>
@@ -33,4 +32,4 @@ class MakeOrderView extends React.Component{
 
 }
 
-export default MakeOrderView;
+export default MicroView;

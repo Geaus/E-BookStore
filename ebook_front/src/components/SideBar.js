@@ -6,7 +6,7 @@ import {
     AuditOutlined,
     UserOutlined,
     CarryOutOutlined,
-    UserAddOutlined, BarChartOutlined, DotChartOutlined
+    UserAddOutlined, BarChartOutlined, DotChartOutlined, SearchOutlined
 } from '@ant-design/icons';
 import "../css/SiderBar.css"
 import {Link} from 'react-router-dom'
@@ -135,6 +135,12 @@ class SideBar extends React.Component{
                             <Menu.Item key="5" icon={<UserOutlined/>}>
                                 <Link to="/profile">
                                     <span style={{ fontSize: '16px' }}>Profile</span>
+                                </Link>
+                            </Menu.Item>
+
+                            <Menu.Item key="6" icon={<SearchOutlined/>}>
+                                <Link to="/micro">
+                                    <span style={{ fontSize: '16px' }}>Micro</span>
                                 </Link>
                             </Menu.Item>
 

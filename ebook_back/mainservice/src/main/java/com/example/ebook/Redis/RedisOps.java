@@ -14,7 +14,7 @@ public class RedisOps {
             return redisTemplate.opsForValue().get(key);
 
         }catch (Exception e){
-            e.printStackTrace();
+//            e.printStackTrace();
             System.out.println("Redis 连接出现异常");
             return null;
         }

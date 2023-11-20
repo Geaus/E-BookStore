@@ -11,6 +11,7 @@ import com.example.ebook.Repository.UserRepository;
 import com.example.ebook.Service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -42,7 +43,7 @@ public class OrderDaoImpl implements OrderDao {
         return ordersRepository.findAll();
     }
 
-    @Transactional(propagation = Propagation.REQUIRED)
+    @Transactional(propagation = Propagation.REQUIRED,rollbackFor=Exception.class)
     @Override
     public void save(Orders orders){
         ordersRepository.save(orders);
