@@ -6,16 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eBook" />
         <module name="eureka" />
         <module name="gateway" />
         <module name="microservice" />
+        <module name="mainservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eBook" target="1.8" />
       <module name="eureka" target="1.8" />
       <module name="gateway" target="1.8" />
+      <module name="mainservice" target="1.8" />
       <module name="microservice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -24,6 +25,7 @@
       <module name="eBook" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="mainservice" options="-parameters" />
       <module name="microservice" options="-parameters" />
     </option>
   </component>

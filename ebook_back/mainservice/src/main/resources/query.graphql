@@ -1,0 +1,13 @@
+query bookDetails {
+  bookById(id: "1") {
+    id
+    image
+    name
+    author
+    type
+    price
+    inventory
+    exist
+    description
+  }
+}

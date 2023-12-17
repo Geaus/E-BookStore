@@ -1,17 +1,17 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="eBook:war exploded">
+  <artifact type="exploded-war" name="mainservice:war exploded">
     <output-path>$PROJECT_DIR$/mainservice/target/eBook-0.0.1-SNAPSHOT</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
-        <module>eBook</module>
+        <module>mainservice</module>
         <packaging>war</packaging>
       </options>
     </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="eBook" />
+          <element id="module-output" name="mainservice" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:2.7.11" />
@@ -161,7 +161,7 @@
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/mainservice/target/eBook-0.0.1-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="eBook/web/Web" />
+      <element id="javaee-facet-resources" facet="mainservice/web/Web" />
     </root>
   </artifact>
 </component>

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mainservice/eBook.iml" filepath="$PROJECT_DIR$/mainservice/eBook.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ebook_back.iml" filepath="$PROJECT_DIR$/.idea/ebook_back.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mainservice/mainservice.iml" filepath="$PROJECT_DIR$/mainservice/mainservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice/microservice.iml" filepath="$PROJECT_DIR$/microservice/microservice.iml" />
     </modules>
   </component>
