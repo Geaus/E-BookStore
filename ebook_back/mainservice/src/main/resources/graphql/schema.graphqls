@@ -1,5 +1,5 @@
 type Query {
-    bookById(id: ID): Book
+    bookById(id: String): Book
 }
 
 type Book {

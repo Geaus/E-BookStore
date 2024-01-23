@@ -1,32 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/se3353_25_spark_java/se3353_25_spark_java/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/se3353_24_hadoopmrsample/se3353_24_hadoopmrsample/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="nginx_1" />
+        <module name="se3353_25_spark_java" />
+        <module name="nginx_2" />
+        <module name="ebook" />
+        <module name="se3353_24_hadoopmrsample" />
         <module name="eureka" />
-        <module name="gateway" />
         <module name="microservice" />
         <module name="mainservice" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="book" target="17" />
       <module name="eBook" target="1.8" />
+      <module name="ebook" target="1.8" />
       <module name="eureka" target="1.8" />
       <module name="gateway" target="1.8" />
+      <module name="hadoop" target="1.8" />
       <module name="mainservice" target="1.8" />
       <module name="microservice" target="1.8" />
+      <module name="nginx_1" target="1.8" />
+      <module name="nginx_2" target="1.8" />
+      <module name="se3353_24_hadoopmrsample" target="1.8" />
+      <module name="se3353_25_spark_java" target="1.8" />
+      <module name="spark" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="book" options="-parameters" />
       <module name="eBook" options="-parameters" />
+      <module name="ebook" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="hadoop" options="-parameters" />
       <module name="mainservice" options="-parameters" />
       <module name="microservice" options="-parameters" />
+      <module name="nginx_1" options="-parameters" />
+      <module name="nginx_2" options="-parameters" />
+      <module name="spark" options="-parameters" />
     </option>
   </component>
 </project>

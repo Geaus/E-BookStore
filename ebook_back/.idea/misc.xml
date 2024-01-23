@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/ebook" />
     <file type="web" url="file://$PROJECT_DIR$/mainservice" />
     <file type="web" url="file://$PROJECT_DIR$/microservice" />
   </component>
@@ -11,10 +12,18 @@
         <option value="$PROJECT_DIR$/mainservice/pom.xml" />
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/microservice/pom.xml" />
+        <option value="$PROJECT_DIR$/book/pom.xml" />
+        <option value="$PROJECT_DIR$/ebook/pom.xml" />
+        <option value="$PROJECT_DIR$/hadoop/pom.xml" />
+        <option value="$PROJECT_DIR$/spark/pom.xml" />
+        <option value="$PROJECT_DIR$/se3353_25_spark_java/se3353_25_spark_java/pom.xml" />
+        <option value="$PROJECT_DIR$/se3353_24_hadoopmrsample/se3353_24_hadoopmrsample/pom.xml" />
+        <option value="$PROJECT_DIR$/nginx_1/pom.xml" />
+        <option value="$PROJECT_DIR$/nginx_2/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="openjdk-19" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="ProjectType">
     <option name="id" value="jpab" />
   </component>

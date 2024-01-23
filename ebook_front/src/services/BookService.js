@@ -1,13 +1,14 @@
 import {message} from "antd";
+import {ip} from "../App";
 export function getBook(bookId) {
-    return fetch(`http://localhost:8080/main/getBook/${bookId}`).then((response) =>
+    return fetch(ip+`/getBook/${bookId}`).then((response) =>
         response.json()
     );
 }
 
 export const getBooks = (callback) => {
 
-    fetch('http://localhost:8080/main/getBooks')
+    fetch(ip+'/getBooks')
         .then(response => response.json())
         .then((data) => {
             callback(data);
@@ -30,7 +31,7 @@ export const addCart = (uid,bookid) => {
     params.append('uid', uid);
     params.append('bookid', bookid);
 
-      fetch(`http://localhost:8080/main/addCart?`+params.toString())
+      fetch(ip+`/addCart?`+params.toString())
 
          .then(response=>{
             if(response.ok){
@@ -49,7 +50,7 @@ export const makeOrder = (callback) => {
     const params = new URLSearchParams();
     params.append('uid', uid);
 
-    fetch('http://localhost:8080/main/makeOrder?'+params.toString()).then()
+    fetch(ip+'/makeOrder?'+params.toString()).then()
 
 };
 
@@ -60,7 +61,7 @@ export const getCart = (callback) => {
     const params = new URLSearchParams();
     params.append('uid', uid);
 
-    fetch('http://localhost:8080/main/getCarts?'+params.toString())
+    fetch(ip+'/getCarts?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);
@@ -73,7 +74,7 @@ export const getOrders = (callback) => {
     const params = new URLSearchParams();
     params.append('uid', uid);
 
-    fetch('http://localhost:8080/main/getOrders?'+params.toString())
+    fetch(ip+'/getOrders?'+params.toString())
         .then((response) => response.json())
         .then((data) => {
             callback(data);
@@ -82,7 +83,7 @@ export const getOrders = (callback) => {
 
 export const statistic=(params,callback)=>{
 
-    fetch('http://localhost:8080/main/statistic?'+params.toString())
+    fetch(ip+'/statistic?'+params.toString())
         .then(response => response.json())
         .then((data) => {
           callback(data);
@@ -91,7 +92,7 @@ export const statistic=(params,callback)=>{
 
 export const UserFilterOrderDate=(params,callback)=>{
 
-    fetch('http://localhost:8080/main/UserFilterOrderDate?'+params.toString())
+    fetch(ip+'/UserFilterOrderDate?'+params.toString())
         .then(response => response.json())
         .then((data) => {
            callback(data);
@@ -101,7 +102,7 @@ export const UserFilterOrderDate=(params,callback)=>{
 
 export const UserFilterOrderBook=(params,callback)=>{
 
-    fetch('http://localhost:8080/main/UserFilterOrderBook?'+params.toString())
+    fetch(ip+'/UserFilterOrderBook?'+params.toString())
         .then(response => response.json())
         .then((data) => {
            callback(data);
@@ -111,10 +112,50 @@ export const UserFilterOrderBook=(params,callback)=>{
 
 export const filterBook=(params,callback)=>{
 
-    fetch('http://localhost:8080/main/filterBook?'+params.toString())
+    fetch(ip+'/filterBook?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);
         })
 
+}
+
+export const searchByTypeRelate=(params,callback)=>{
+
+    fetch(ip+'/neo4j?'+params.toString())
+        .then(response => response.json())
+        .then((data) => {
+            callback(data);
+        })
+}
+export const searchByGraphl=(data,callback)=>{
+
+    fetch(ip+'/graphql',{
+        method: 'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(data),
+        credentials:'include'
+    })
+        .then(response => response.json())
+        .then((data) => {
+            callback(data);
+        })
+}
+export const hadoop_word_count=(callback)=>{
+
+    fetch(ip+'/hadoop')
+        .then(response => response.json())
+        .then((data) => {
+            callback(data);
+        })
+}
+export const spark_word_count=(callback)=>{
+
+    fetch(ip+'/spark')
+        .then(response => response.json())
+        .then((data) => {
+            callback(data);
+        })
 }

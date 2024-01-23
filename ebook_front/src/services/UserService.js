@@ -1,4 +1,5 @@
 import {message} from "antd";
+import {ip} from "../App";
 
 export const getUser = (callback) => {
 
@@ -6,7 +7,7 @@ export const getUser = (callback) => {
     const params = new URLSearchParams();
     params.append('uid', uid);
 
-    fetch('http://localhost:8080/main/getUser?'+params.toString())
+    fetch(ip+'/getUser?'+params.toString())
 
         .then(response => response.json())
         .then((data) => {
@@ -17,7 +18,7 @@ export const getUser = (callback) => {
 
 export const login = (username, password) => {
 
-    return fetch('http://localhost:8080/main/login', {
+    return fetch(ip+'/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -47,7 +48,7 @@ export const login = (username, password) => {
 
 export const logout = (callback) => {
 
-   fetch('http://localhost:8080/main/logout',{
+   fetch(ip+'/logout',{
        credentials:'include'
    })
        .then(response => response.json())
@@ -60,7 +61,7 @@ export const logout = (callback) => {
 
 export const newUser = (params,callback) => {
 
-    fetch('http://localhost:8080/main/newUser?'+params.toString())
+    fetch(ip+'/newUser?'+params.toString())
         .then(response => response.json())
         .then((data) => {
             callback(data);

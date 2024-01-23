@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ebook/ebook.iml" filepath="$PROJECT_DIR$/ebook/ebook.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ebook_back.iml" filepath="$PROJECT_DIR$/.idea/ebook_back.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/mainservice/mainservice.iml" filepath="$PROJECT_DIR$/mainservice/mainservice.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice/microservice.iml" filepath="$PROJECT_DIR$/microservice/microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nginx_1/nginx_1.iml" filepath="$PROJECT_DIR$/nginx_1/nginx_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nginx_2/nginx_2.iml" filepath="$PROJECT_DIR$/nginx_2/nginx_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/se3353_24_hadoopmrsample/se3353_24_hadoopmrsample/se3353_24_hadoopmrsample.iml" filepath="$PROJECT_DIR$/se3353_24_hadoopmrsample/se3353_24_hadoopmrsample/se3353_24_hadoopmrsample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/se3353_25_spark_java/se3353_25_spark_java/se3353_25_spark_java.iml" filepath="$PROJECT_DIR$/se3353_25_spark_java/se3353_25_spark_java/se3353_25_spark_java.iml" />
     </modules>
   </component>
 </project>

@@ -144,6 +144,17 @@ class SideBar extends React.Component{
                                 </Link>
                             </Menu.Item>
 
+                            <Menu.Item key="7" icon={<SearchOutlined/>}>
+                                <Link to="/typeRelate">
+                                    <span style={{ fontSize: '16px' }}>TypeRelate</span>
+                                </Link>
+                            </Menu.Item>
+                            <Menu.Item key="8" icon={<SearchOutlined/>}>
+                                <Link to="/mr">
+                                    <span style={{ fontSize: '16px' }}>MR</span>
+                                </Link>
+                            </Menu.Item>
+
                             {/**/}
 
 

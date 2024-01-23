@@ -16,6 +16,13 @@ import AdminOrderView from "./view/AdminView/AdminOrderView";
 import AdminSaleView from "./view/AdminView/AdminSaleView";
 import AdminConsumeView from "./view/AdminView/AdminConsumeView";
 import MicroView from "./view/MicroView";
+import TypeRelateView from "./view/TypeRelateView";
+import MrView from "./view/MrView";
+
+export const main_ip = 'http://localhost:8080/main'
+export const micro_ip = 'http://localhost:8080/micro'
+// export const ip = 'http://localhost:8090'
+export const ip = 'http://localhost:8080/main'
 
 
 function App() {
@@ -33,6 +40,8 @@ function App() {
               <Route path="/profile" element={<ProfileView />} />
               <Route path="/statistic" element={<StatisticView />} />
               <Route path="/micro" element={<MicroView />} />
+              <Route path="/typeRelate" element={<TypeRelateView />} />
+              <Route path="/mr" element={<MrView />} />
 
               <Route path="adminUser" element={<AdminUserView/>}/>
               <Route path="adminBook" element={<AdminBookView/>}/>

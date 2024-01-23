@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="eBook-0.0.1-SNAPSHOT.war">
+    <root id="archive" name="mainservice-0.0.1-SNAPSHOT.war">
       <element id="artifact" artifact-name="mainservice:war exploded" />
     </root>
   </artifact>
